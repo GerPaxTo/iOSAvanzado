@@ -1,14 +1,14 @@
 //
-//  HomeVewController.swift
+//  ToolsViewController.swift
 //  HeroesAvanzado
 //
-//  Created by Gerardo Paxtian on 14/02/23.
+//  Created by Gerardo Paxtian on 17/02/23.
 //
 
 import UIKit
 
-class HomeVewController: UIViewController {
-
+class ToolsViewController: UIViewController {
+    
     @IBOutlet weak var sideMenuBtn: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -17,5 +17,5 @@ class HomeVewController: UIViewController {
         sideMenuBtn.target = revealViewController()
         sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
     }
-
 }
+ 

@@ -19,10 +19,10 @@ class SideMenuViewController: UIViewController {
     var defaultHighlightedCell: Int = 0
     
     var menu: [SideMenuModel] = [
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Home"),
-        SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "Music"),
-        SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Movies"),
-        SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "Books")
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Heroes"),
+        SideMenuModel(icon: UIImage(systemName: "mappin.and.ellipse")!, title: "Map"),
+        SideMenuModel(icon: UIImage(systemName: "square.and.pencil")!, title: "Login"),
+        SideMenuModel(icon: UIImage(systemName: "wrench.and.screwdriver.fill")!, title: "Tools")
     ]
     
     var delegate: SideMenuViewControllerDelegate?
@@ -32,7 +32,7 @@ class SideMenuViewController: UIViewController {
         
         self.sideMenuTableView.delegate = self
         self.sideMenuTableView.dataSource = self
-        self.sideMenuTableView.backgroundColor = .cyan
+        self.sideMenuTableView.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
         self.sideMenuTableView.separatorStyle = .none
         
         DispatchQueue.main.async {
@@ -65,7 +65,8 @@ extension SideMenuViewController: UITableViewDataSource {
         cell.titleLabel.text = self.menu[indexPath.row].title
         
         let myCustomSelectionColorView = UIView()
-        myCustomSelectionColorView.backgroundColor = .gray
+        myCustomSelectionColorView.backgroundColor = #colorLiteral(red: 0.6196078431, green: 0.1098039216, blue: 0.2509803922, alpha: 1)
+        
         cell.selectedBackgroundView = myCustomSelectionColorView
         return cell
     }
@@ -73,10 +74,6 @@ extension SideMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.delegate?.selectedCell(indexPath.row)
-        
-        if indexPath.row == 4 {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
     }
     
     

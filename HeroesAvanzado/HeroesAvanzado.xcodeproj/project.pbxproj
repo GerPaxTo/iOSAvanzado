@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1F6914299F07A700B184F4 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1F6913299F07A700B184F4 /* HeroesViewController.swift */; };
+		9E209CC829A181C7001E4FD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E209CC729A181C7001E4FD1 /* Constants.swift */; };
+		9E209CCB29A18205001E4FD1 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E209CCA29A18205001E4FD1 /* ApiClient.swift */; };
+		9E209CCD29A18212001E4FD1 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E209CCC29A18212001E4FD1 /* HeroModel.swift */; };
+		9E209CD429A18616001E4FD1 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E209CD329A18616001E4FD1 /* Locations.swift */; };
+		9E209CD729A18D32001E4FD1 /* LocalDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E209CD629A18D32001E4FD1 /* LocalDataLayer.swift */; };
+		9E209CDB29A19572001E4FD1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E209CD929A19572001E4FD1 /* TableViewCell.swift */; };
+		9E209CDC29A19572001E4FD1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E209CDA29A19572001E4FD1 /* TableViewCell.xib */; };
 		9E3DC321299C4121002D3FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC320299C4121002D3FA4 /* AppDelegate.swift */; };
 		9E3DC323299C4121002D3FA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC322299C4121002D3FA4 /* SceneDelegate.swift */; };
-		9E3DC325299C4121002D3FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC324299C4121002D3FA4 /* ViewController.swift */; };
 		9E3DC328299C4121002D3FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3DC326299C4121002D3FA4 /* Main.storyboard */; };
 		9E3DC32B299C4121002D3FA4 /* HeroesAvanzado.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC329299C4121002D3FA4 /* HeroesAvanzado.xcdatamodeld */; };
 		9E3DC32D299C4122002D3FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3DC32C299C4122002D3FA4 /* Assets.xcassets */; };
@@ -22,7 +29,9 @@
 		9E3DC361299C5CF7002D3FA4 /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3DC35F299C5CF7002D3FA4 /* SideMenuCell.xib */; };
 		9E3DC363299C65F5002D3FA4 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC362299C65F5002D3FA4 /* SideMenuViewController.swift */; };
 		9E3DC365299C6680002D3FA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC364299C6680002D3FA4 /* MainViewController.swift */; };
-		9E3DC367299C8903002D3FA4 /* HomeVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3DC366299C8903002D3FA4 /* HomeVewController.swift */; };
+		9EDACE8229A03AA300EC579E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDACE8129A03AA300EC579E /* MapViewController.swift */; };
+		9EDACE8429A03BA200EC579E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDACE8329A03BA200EC579E /* LogInViewController.swift */; };
+		9EED926629A03CE300924B97 /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EED926529A03CE300924B97 /* ToolsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +52,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E1F6913299F07A700B184F4 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		9E209CC729A181C7001E4FD1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9E209CCA29A18205001E4FD1 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		9E209CCC29A18212001E4FD1 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		9E209CD329A18616001E4FD1 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		9E209CD629A18D32001E4FD1 /* LocalDataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataLayer.swift; sourceTree = "<group>"; };
+		9E209CD929A19572001E4FD1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9E209CDA29A19572001E4FD1 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		9E3DC31D299C4121002D3FA4 /* HeroesAvanzado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesAvanzado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3DC320299C4121002D3FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E3DC322299C4121002D3FA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E3DC324299C4121002D3FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E3DC327299C4121002D3FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E3DC32A299C4121002D3FA4 /* HeroesAvanzado.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeroesAvanzado.xcdatamodel; sourceTree = "<group>"; };
 		9E3DC32C299C4122002D3FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +78,9 @@
 		9E3DC35F299C5CF7002D3FA4 /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		9E3DC362299C65F5002D3FA4 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		9E3DC364299C6680002D3FA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9E3DC366299C8903002D3FA4 /* HomeVewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVewController.swift; sourceTree = "<group>"; };
+		9EDACE8129A03AA300EC579E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9EDACE8329A03BA200EC579E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9EED926529A03CE300924B97 /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +108,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1F6912299F034A00B184F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E1F6913299F07A700B184F4 /* HeroesViewController.swift */,
+				9E209CD829A19552001E4FD1 /* TableCell */,
+				9EDACE8129A03AA300EC579E /* MapViewController.swift */,
+				9EDACE8329A03BA200EC579E /* LogInViewController.swift */,
+				9EED926529A03CE300924B97 /* ToolsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9E209CC629A18192001E4FD1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E209CC729A181C7001E4FD1 /* Constants.swift */,
+			);
+			name = Utils;
+			path = "Utilerías";
+			sourceTree = "<group>";
+		};
+		9E209CC929A181EA001E4FD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E209CCC29A18212001E4FD1 /* HeroModel.swift */,
+				9E209CD329A18616001E4FD1 /* Locations.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E209CD529A18D17001E4FD1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9E209CCA29A18205001E4FD1 /* ApiClient.swift */,
+				9E209CD629A18D32001E4FD1 /* LocalDataLayer.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9E209CD829A19552001E4FD1 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E209CD929A19572001E4FD1 /* TableViewCell.swift */,
+				9E209CDA29A19572001E4FD1 /* TableViewCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
 		9E3DC314299C4121002D3FA4 = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +179,14 @@
 		9E3DC31F299C4121002D3FA4 /* HeroesAvanzado */ = {
 			isa = PBXGroup;
 			children = (
+				9E209CD529A18D17001E4FD1 /* Managers */,
+				9E209CC929A181EA001E4FD1 /* Model */,
+				9E209CC629A18192001E4FD1 /* Utils */,
+				9E3DC364299C6680002D3FA4 /* MainViewController.swift */,
+				9E1F6912299F034A00B184F4 /* ViewControllers */,
 				9E3DC355299C57A5002D3FA4 /* Menu */,
 				9E3DC320299C4121002D3FA4 /* AppDelegate.swift */,
 				9E3DC322299C4121002D3FA4 /* SceneDelegate.swift */,
-				9E3DC324299C4121002D3FA4 /* ViewController.swift */,
 				9E3DC326299C4121002D3FA4 /* Main.storyboard */,
 				9E3DC32C299C4122002D3FA4 /* Assets.xcassets */,
 				9E3DC32E299C4122002D3FA4 /* LaunchScreen.storyboard */,
@@ -150,8 +220,6 @@
 				9E3DC35E299C5CF7002D3FA4 /* SideMenuCell.swift */,
 				9E3DC35F299C5CF7002D3FA4 /* SideMenuCell.xib */,
 				9E3DC362299C65F5002D3FA4 /* SideMenuViewController.swift */,
-				9E3DC364299C6680002D3FA4 /* MainViewController.swift */,
-				9E3DC366299C8903002D3FA4 /* HomeVewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -261,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3DC330299C4122002D3FA4 /* LaunchScreen.storyboard in Resources */,
+				9E209CDC29A19572001E4FD1 /* TableViewCell.xib in Resources */,
 				9E3DC361299C5CF7002D3FA4 /* SideMenuCell.xib in Resources */,
 				9E3DC32D299C4122002D3FA4 /* Assets.xcassets in Resources */,
 				9E3DC328299C4121002D3FA4 /* Main.storyboard in Resources */,
@@ -288,15 +357,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E3DC367299C8903002D3FA4 /* HomeVewController.swift in Sources */,
 				9E3DC363299C65F5002D3FA4 /* SideMenuViewController.swift in Sources */,
+				9E209CD729A18D32001E4FD1 /* LocalDataLayer.swift in Sources */,
+				9E209CD429A18616001E4FD1 /* Locations.swift in Sources */,
 				9E3DC35D299C5BEB002D3FA4 /* SideMenuModel.swift in Sources */,
 				9E3DC360299C5CF7002D3FA4 /* SideMenuCell.swift in Sources */,
-				9E3DC325299C4121002D3FA4 /* ViewController.swift in Sources */,
 				9E3DC32B299C4121002D3FA4 /* HeroesAvanzado.xcdatamodeld in Sources */,
+				9EDACE8229A03AA300EC579E /* MapViewController.swift in Sources */,
 				9E3DC321299C4121002D3FA4 /* AppDelegate.swift in Sources */,
+				9EED926629A03CE300924B97 /* ToolsViewController.swift in Sources */,
+				9E1F6914299F07A700B184F4 /* HeroesViewController.swift in Sources */,
+				9E209CCB29A18205001E4FD1 /* ApiClient.swift in Sources */,
 				9E3DC323299C4121002D3FA4 /* SceneDelegate.swift in Sources */,
+				9EDACE8429A03BA200EC579E /* LogInViewController.swift in Sources */,
+				9E209CCD29A18212001E4FD1 /* HeroModel.swift in Sources */,
+				9E209CDB29A19572001E4FD1 /* TableViewCell.swift in Sources */,
 				9E3DC365299C6680002D3FA4 /* MainViewController.swift in Sources */,
+				9E209CC829A181C7001E4FD1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
