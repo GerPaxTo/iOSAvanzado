@@ -209,30 +209,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tools" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-2k-eG1">
-                                <rect key="frame" x="171.66666666666666" y="345.66666666666669" width="50" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-SM-Z6w">
+                                <rect key="frame" x="30" y="33" width="333" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-rD-T9w">
+                                <rect key="frame" x="30" y="69" width="333" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="oxf-BU-Adx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y17-Bt-CPn">
+                                <rect key="frame" x="30" y="207" width="333" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="M8b-gP-Hn4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                    <color key="baseForegroundColor" red="0.73869615789999998" green="0.12858635190000001" blue="0.29464554790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginTapped:" destination="YIv-IO-zZK" eventType="touchUpInside" id="rWu-J0-N62"/>
+                                    <action selector="logoutTapped:" destination="AcW-b0-AJh" eventType="touchUpInside" id="NuB-fi-Cju"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-tc-CJh">
+                                <rect key="frame" x="30" y="304" width="333" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="qO4-nQ-dwn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete Heroes">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.62138414379999996" green="0.10832791780000001" blue="0.25072029229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="detTapped:" destination="AcW-b0-AJh" eventType="touchUpInside" id="eEi-8R-wC3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6d1-ia-qdc"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5fe-2k-eG1" firstAttribute="centerY" secondItem="6d1-ia-qdc" secondAttribute="centerY" id="MUO-UE-HpL"/>
-                            <constraint firstItem="5fe-2k-eG1" firstAttribute="centerX" secondItem="6d1-ia-qdc" secondAttribute="centerX" id="hLT-a4-gqN"/>
+                            <constraint firstItem="6d1-ia-qdc" firstAttribute="bottom" secondItem="tO9-tc-CJh" secondAttribute="bottom" constant="357" id="9W7-zE-9hl"/>
+                            <constraint firstItem="fws-rD-T9w" firstAttribute="leading" secondItem="6d1-ia-qdc" secondAttribute="leading" constant="30" id="BIQ-xD-Dec"/>
+                            <constraint firstItem="tO9-tc-CJh" firstAttribute="leading" secondItem="6d1-ia-qdc" secondAttribute="leading" constant="30" id="EK2-lz-04r"/>
+                            <constraint firstItem="Y17-Bt-CPn" firstAttribute="top" secondItem="fws-rD-T9w" secondAttribute="bottom" constant="100" id="KGj-wP-1nn"/>
+                            <constraint firstItem="Y17-Bt-CPn" firstAttribute="top" secondItem="fws-rD-T9w" secondAttribute="bottom" constant="100" id="Seg-tD-N33"/>
+                            <constraint firstItem="6d1-ia-qdc" firstAttribute="trailing" secondItem="fws-rD-T9w" secondAttribute="trailing" constant="30" id="TyT-wD-8bG"/>
+                            <constraint firstItem="6d1-ia-qdc" firstAttribute="trailing" secondItem="tO9-tc-CJh" secondAttribute="trailing" constant="30" id="UpR-EX-pMg"/>
+                            <constraint firstItem="Y2Y-SM-Z6w" firstAttribute="top" secondItem="6d1-ia-qdc" secondAttribute="top" constant="33" id="Zjs-yv-VZS"/>
+                            <constraint firstItem="6d1-ia-qdc" firstAttribute="trailing" secondItem="Y17-Bt-CPn" secondAttribute="trailing" constant="30" id="a6F-S3-VgQ"/>
+                            <constraint firstItem="Y17-Bt-CPn" firstAttribute="leading" secondItem="6d1-ia-qdc" secondAttribute="leading" constant="30" id="akr-P6-sl8"/>
+                            <constraint firstItem="fws-rD-T9w" firstAttribute="top" secondItem="Y2Y-SM-Z6w" secondAttribute="bottom" constant="13" id="c27-3m-VRQ"/>
+                            <constraint firstItem="6d1-ia-qdc" firstAttribute="trailing" secondItem="Y2Y-SM-Z6w" secondAttribute="trailing" constant="30" id="kf6-R6-kVm"/>
+                            <constraint firstItem="tO9-tc-CJh" firstAttribute="top" secondItem="Y17-Bt-CPn" secondAttribute="bottom" constant="43" id="tbd-g4-7lO"/>
+                            <constraint firstItem="Y2Y-SM-Z6w" firstAttribute="leading" secondItem="6d1-ia-qdc" secondAttribute="leading" constant="30" id="x5l-1q-HbK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tools" id="jdG-Zv-wun">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="oRX-st-RI0"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="tO9-tc-CJh" id="MLZ-1f-gos"/>
+                        <outlet property="labeEmail" destination="fws-rD-T9w" id="TQc-yM-ZI2"/>
+                        <outlet property="logoutButton" destination="Y17-Bt-CPn" id="WNV-Z7-Rxh"/>
                         <outlet property="sideMenuBtn" destination="oRX-st-RI0" id="mJe-VJ-kvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDQ-pA-fiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="1675"/>
+            <point key="canvasLocation" x="571.75572519083971" y="1674.6478873239437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rlA-YM-u3j">

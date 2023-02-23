@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 struct CustomItem {
     let image: UIImage
@@ -20,7 +21,10 @@ class HeroesViewController: UIViewController , UITableViewDelegate, UITableViewD
     var searchController: UISearchController!
     var heroes: [Heroe] = []
     var filteredHeroes: [Heroe] = []
-        
+    var context = AppDelegate.sharedAppDelegate.coreDataManager.managedContext
+    var login: [Login] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,21 +46,106 @@ class HeroesViewController: UIViewController , UITableViewDelegate, UITableViewD
         let xib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "customTableCell")
         
-        let token = LocalDataLayer.shared.getToken()
-        ApiClient.shared.fetchHeroes(token: token) { [weak self] allHeroes, error in
-            guard let self = self else { return }
+        login = getLogin()
+        
+        if !login.isEmpty {
+            MyLogin.token = login[0].token!
+            MyLogin.email = login[0].email!
+            MyLogin.password = login[0].password!
+        } else {
+            MyLogin.token = ""
+            MyLogin.email = ""
+            MyLogin.password = ""
+        }
+        
+        let heroesCD = leeHeroes()
+        
+        if !heroesCD.isEmpty {
+            for hero in heroesCD {
+                let nHeroe = Heroe(id: hero.id!, name: hero.name!, photo: hero.photo!, description: hero.descripcion!)
+                heroes.append(nHeroe)
+                
+            }
+            self .filteredHeroes = heroes
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
             
-            if let allHeroes = allHeroes {
-                self.heroes = allHeroes
-                self.filteredHeroes = allHeroes
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+        } else {
+            ApiClient.shared.fetchHeroes(token: MyLogin.token) { [weak self] allHeroes, error in
+                guard let self = self else { return }
+                
+                if let allHeroes = allHeroes {
+                    self.heroes = allHeroes
+                    self.filteredHeroes = allHeroes
+                    self.saveCadaHeroe(heroes: allHeroes)
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    print ("Error fetching heroes", error?.localizedDescription ?? "")
                 }
-            } else {
-                print ("Error fetching heroes", error?.localizedDescription ?? "")
             }
         }
     }
+    
+    private func getLogin() -> [Login] {
+        let loginFetch: NSFetchRequest<Login> = Login.fetchRequest()
+        
+        do {
+            let result = try context.fetch(loginFetch)
+            
+            return result
+            
+        } catch let error as NSError {
+            debugPrint("Error -> \(error)")
+            return []
+        }
+    }
+    
+    private func leeHeroes() -> [Heroes] {
+        let context = AppDelegate.sharedAppDelegate.coreDataManager.managedContext
+        
+        let heroesFetch: NSFetchRequest<Heroes> = Heroes.fetchRequest()
+        
+        do {
+            let result = try context.fetch(heroesFetch)
+            return result
+            
+        } catch let error as NSError {
+            debugPrint("Error -> \(error)")
+            return []
+        }
+    }
+    
+    func saveCadaHeroe(heroes: [Heroe]){
+        for hero in heroes {
+            salvaHeroes(hero: hero)
+        }
+    }
+    
+    
+    private func salvaHeroes(hero: Heroe) {
+        let context = AppDelegate.sharedAppDelegate.coreDataManager.managedContext
+        let cdHeroes = Heroes(context: context)
+
+        cdHeroes.id = hero.id
+        cdHeroes.name = hero.name
+        cdHeroes.descripcion = hero.description
+        cdHeroes.photo = hero.photo
+        cdHeroes.longitud = ""
+        cdHeroes.latitud = ""
+        
+        do {
+            try context.save()
+            
+        } catch let error {
+            debugPrint(error)
+        }
+        
+    }
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {

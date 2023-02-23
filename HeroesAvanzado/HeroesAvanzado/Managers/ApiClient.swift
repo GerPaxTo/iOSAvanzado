@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum NetworkError: Error {
     case malformedURL

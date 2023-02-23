@@ -7,65 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CCDEE54B-8F38-4153-AD21-352FDD4B7538"
-            shouldBeEnabled = "No"
+            uuid = "C531CED0-57C9-4897-A474-2DBE9700B71A"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HeroesAvanzado/Managers/ApiClient.swift"
+            filePath = "HeroesAvanzado/ViewControllers/LogInViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "fetchLocations(token:id:completion:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "insertManually()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CCDEE54B-8F38-4153-AD21-352FDD4B7538 - 60e499ca74147002"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HeroesAvanzado.ApiClient.fetchLocations(token: Swift.Optional&lt;Swift.String&gt;, id: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Optional&lt;Swift.Array&lt;HeroesAvanzado.Locations&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "HeroesAvanzado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gerardopaxtian/Documents/GitHub/iOSAvanzado/HeroesAvanzado/HeroesAvanzado/Managers/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "560">
-               </Location>
-               <Location
-                  uuid = "CCDEE54B-8F38-4153-AD21-352FDD4B7538 - 60e499ca74147002"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HeroesAvanzado.ApiClient.fetchLocations(token: Swift.Optional&lt;Swift.String&gt;, id: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Optional&lt;Swift.Array&lt;HeroesAvanzado.Locations&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "HeroesAvanzado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gerardopaxtian/Documents/GitHub/iOSAvanzado/HeroesAvanzado/HeroesAvanzado/Managers/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "640">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "674E7C29-A3B3-4F9C-B9B8-1CF3D85D6D0C"
+            uuid = "8158DBA4-1CCC-4F0F-8E31-31B141111B55"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HeroesAvanzado/ViewControllers/MapViewController.swift"
+            filePath = "HeroesAvanzado/Model/ViewControllers/Map/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "muestraPuntos()"
-            landmarkType = "9">
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "createAnnotation(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8158DBA4-1CCC-4F0F-8E31-31B141111B55 - 51a7ce198637e903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeroesAvanzado.MapViewController.leeTotoHeroes() -&gt; ()"
+                  moduleName = "HeroesAvanzado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gerardopaxtian/Documents/GitHub/iOSAvanzado/HeroesAvanzado/HeroesAvanzado/Model/ViewControllers/Map/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+               <Location
+                  uuid = "8158DBA4-1CCC-4F0F-8E31-31B141111B55 - fe3c81e43da997af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;HeroesAvanzado.Locations&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HeroesAvanzado.MapViewController.leeTotoHeroes() -&gt; ()"
+                  moduleName = "HeroesAvanzado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gerardopaxtian/Documents/GitHub/iOSAvanzado/HeroesAvanzado/HeroesAvanzado/Model/ViewControllers/Map/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
