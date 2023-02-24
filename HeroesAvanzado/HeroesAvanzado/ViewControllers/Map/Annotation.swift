@@ -13,6 +13,8 @@ class Annotation: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
     let name: String
     let photo: String
+    let id: String
+    let descripcion: String
     
     init(heroe: Heroes) {
         var lat = Double(heroe.latitud!)
@@ -24,6 +26,8 @@ class Annotation: NSObject, MKAnnotation {
         coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
         name = heroe.name!
         photo = heroe.photo!
+        id = heroe.id!
+        descripcion = heroe.description
     }
     
 }

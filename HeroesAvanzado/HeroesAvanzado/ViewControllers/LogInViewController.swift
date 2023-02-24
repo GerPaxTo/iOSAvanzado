@@ -54,18 +54,20 @@ class LogInViewController: UIViewController {
         ApiClient.shared.login(email: email, password: password) { token, error in
             if let token = token {
                 let login = Login(context: context)
-                
+        
                 login.email = email
-                login.password = password
+                login.password = ""
                 login.token = token
-                
+        
                 do {
                     try context.save()
-                    
+        
                 } catch let error {
                     debugPrint(error)
                     self.showError()
                 }
+                
+                self.saveData(email: email, password:password, token: token)
                 
                 DispatchQueue.main.async {
                 
@@ -81,6 +83,24 @@ class LogInViewController: UIViewController {
                 // self.messageLabel.text = "Usuario o contraseña no válidos"
             }
         }
+    }
+    
+    func saveData(email: String, password: String, token: String) {
+        
+        // Preparamos los atributos necesarios
+        let attributes: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: email,
+            kSecValueData as String: password.data(using: .utf8)!
+        ]
+        
+        // Guardar el usuario
+        if SecItemAdd(attributes as CFDictionary, nil) == noErr {
+            debugPrint("Información del usuario guardada con éxito")
+        } else {
+            debugPrint("Se produjo un error al guardar la información del usuario")
+        }
+        
     }
     
     private func showError() {

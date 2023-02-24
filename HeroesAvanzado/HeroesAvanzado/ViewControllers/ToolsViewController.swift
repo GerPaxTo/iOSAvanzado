@@ -59,7 +59,25 @@ class ToolsViewController: UIViewController {
         }
     }
     
+    func deleteData(email: String) {
+        
+        // Preparamos la consulta
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: email
+        ]
+        
+        // ejecutamos la consulta para eliminar
+        if (SecItemDelete(query as CFDictionary)) == noErr {
+            debugPrint("Información del usuario eliminada con éxito")
+        } else {
+            debugPrint("Se produjo un error al eliminar la información del usuario")
+        }
+    }
+    
     @IBAction func logoutTapped(_ sender: Any) {
+        deleteData(email: MyLogin.email)
+        
         let context = AppDelegate.sharedAppDelegate.coreDataManager.managedContext
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Login")

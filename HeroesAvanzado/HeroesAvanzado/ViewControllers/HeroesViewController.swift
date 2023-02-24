@@ -51,11 +51,14 @@ class HeroesViewController: UIViewController , UITableViewDelegate, UITableViewD
         if !login.isEmpty {
             MyLogin.token = login[0].token!
             MyLogin.email = login[0].email!
-            MyLogin.password = login[0].password!
+            MyLogin.password = readData(email: MyLogin.email)
+            
         } else {
             MyLogin.token = ""
             MyLogin.email = ""
             MyLogin.password = ""
+            showError()
+            return
         }
         
         let heroesCD = leeHeroes()
@@ -102,6 +105,36 @@ class HeroesViewController: UIViewController , UITableViewDelegate, UITableViewD
             debugPrint("Error -> \(error)")
             return []
         }
+    }
+    
+    func readData(email: String) -> String {
+        var password = ""
+        
+        // Preparamos la consulta
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: email,
+            kSecMatchLimit as String: kSecMatchLimitOne,
+            kSecReturnAttributes as String: true,
+            kSecReturnData as String: true
+        ]
+        
+        var item: CFTypeRef?
+        
+        if SecItemCopyMatching(query as CFDictionary, &item) == noErr {
+            
+            // extraemos la información
+            if let existingItem = item as? [String: Any],
+               let passwordData = existingItem[kSecValueData as String] as? Data,
+               let pass = String(data: passwordData, encoding: .utf8) {
+               
+               password = pass
+            }
+            
+        } else {
+            return ""
+        }
+        return password
     }
     
     private func leeHeroes() -> [Heroes] {
@@ -173,6 +206,7 @@ class HeroesViewController: UIViewController , UITableViewDelegate, UITableViewD
         
         cell.titleLabel.text  = heroe.name
         cell.descLabel.text = heroe.description
+        cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
         
         return cell
@@ -181,6 +215,34 @@ class HeroesViewController: UIViewController , UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 140
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let heroe = filteredHeroes[indexPath.row]
+        let heroDetailsViewController = HeroDetailsViewController(heroDetailModel: heroe)
+        
+        self.present(heroDetailsViewController, animated: true)
+    }
+    
+    private func showError() {
+        let alert = UIAlertController(title: "Warning!", message: "Necesita hacer login", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] action in
+            switch action.style{
+                case .default:
+                print("default")
+                
+                case .cancel:
+                print("cancel")
+                
+                case .destructive:
+                print("destructive")
+                
+            @unknown default:
+                debugPrint("unknown")
+            }
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension UIImageView {

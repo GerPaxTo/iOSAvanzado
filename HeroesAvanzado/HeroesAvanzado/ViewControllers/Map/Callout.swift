@@ -48,6 +48,7 @@ class Callout: UIView {
         subtitleLabel.text = "Ver detalles"
         
         subtitleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showDetails)))
+        subtitleLabel.isUserInteractionEnabled = true
         
         addSubview(subtitleLabel)
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
